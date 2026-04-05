@@ -1307,4 +1307,7 @@ a.social-link:focus,
 .skip-link:focus {
     top: 6px;
 }
-  
+.project-card.featured-project {
+    border-color: var(--primary-color);
+    background: rgba(0, 245, 255, 0.05);
+}
