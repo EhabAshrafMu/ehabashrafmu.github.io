@@ -66,57 +66,6 @@
     });
   });
 
-  /* ---------- Skill checker ----------
-     Each chip lists the words a job description might use for it (data-m).
-     Matching is whole-word and case-insensitive, all on the page. */
-  const query = document.getElementById("skill-query");
-  if (query) {
-    const matrix = document.querySelector(".skill-matrix");
-    const result = document.getElementById("skill-result");
-    const clearBtn = document.querySelector(".skill-clear");
-    const esc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "[\\s-]+");
-    const chips = [...matrix.querySelectorAll(".chip")].map((el) => ({
-      el,
-      row: el.closest(".skill-row"),
-      name: el.childNodes[0].textContent.trim(),
-      evidence: el.tagName === "A",
-      note: el.dataset.note || "",
-      re: new RegExp("(^|[^a-z0-9])(" + el.dataset.m.split("|").map(esc).join("|") + ")(?=$|[^a-z0-9])", "i"),
-    }));
-
-    const run = () => {
-      const text = query.value.trim();
-      clearBtn.hidden = !text;
-      matrix.querySelectorAll(".hit, .has-hit").forEach((n) => n.classList.remove("hit", "has-hit"));
-      if (!text) { matrix.classList.remove("filtering"); result.textContent = ""; return; }
-
-      const hits = chips.filter((c) => c.re.test(text));
-      hits.forEach((c) => { c.el.classList.add("hit"); c.row.classList.add("has-hit"); });
-      matrix.classList.add("filtering");
-
-      if (!hits.length) {
-        result.textContent = "None of these tools match yet. If your stack uses something close to what's listed, email me and I'll tell you how my experience maps to it.";
-        return;
-      }
-      const shown = hits.filter((c) => c.evidence).length;
-      const notes = hits.filter((c) => c.note).map((c) => c.note);
-      result.innerHTML = "";
-      const strong = document.createElement("strong");
-      strong.textContent = `${hits.length} ${hits.length === 1 ? "match" : "matches"}: `;
-      result.append(strong, hits.map((c) => c.name).join(", ") + ".");
-      if (shown) {
-        result.append(hits.length === 1 ? " It's used in a project above."
-          : shown === hits.length ? " All of them are used in the projects above."
-          : ` ${shown} of them ${shown === 1 ? "is" : "are"} used in the projects above.`);
-      }
-      notes.forEach((n) => result.append(" " + n + "."));
-    };
-
-    let t;
-    query.addEventListener("input", () => { clearTimeout(t); t = setTimeout(run, 150); });
-    clearBtn.addEventListener("click", () => { query.value = ""; run(); query.focus(); });
-  }
-
   /* ---------- Blueprint tracer ----------
      Each <li> in .flow-steps lists the edges a packet travels (data-hops,
      "-id" means travel the edge backwards) and the nodes to light up. */

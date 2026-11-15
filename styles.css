@@ -328,28 +328,6 @@ strong { font-weight: 650; }
 .job-body li::marker { color: #8C99AB; }
 
 /* ---------- Skills ---------- */
-.skill-check {
-  background: var(--paper); border: 1.5px solid var(--ink); border-radius: 6px;
-  padding: 1.1rem 1.25rem 1rem; margin-bottom: 1.5rem; max-width: 52rem;
-}
-.skill-check-label { display: block; font-weight: 700; margin-bottom: 0.6rem; }
-.skill-check-row { display: flex; gap: 0.75rem; align-items: flex-start; }
-.skill-check textarea {
-  flex: 1; min-height: 4.5rem; resize: vertical;
-  font: 400 var(--t-base)/1.5 var(--font); color: var(--ink);
-  background: var(--white); border: 1px solid var(--rule); border-radius: 4px; padding: 0.65rem 0.8rem;
-}
-.skill-check textarea::placeholder { color: #7D8A9C; }
-.skill-check textarea:focus { outline: 3px solid var(--cobalt); outline-offset: 1px; border-color: var(--cobalt); }
-.skill-clear {
-  font: 600 var(--t-sm) var(--font); color: var(--ink); background: none;
-  border: 1.5px solid var(--ink); border-radius: 6px; padding: 0.6rem 0.9rem; cursor: pointer;
-}
-.skill-clear:hover { background: var(--ink); color: var(--white); }
-.skill-result { margin-top: 0.75rem; color: var(--graphite); font-size: 0.97rem; min-height: 1.5em; }
-.skill-result:empty { display: none; }
-.skill-result strong { color: var(--ink); }
-
 .skill-legend { display: flex; align-items: center; gap: 0.5rem; font-size: var(--t-sm); color: var(--graphite); margin-bottom: 0.75rem; }
 .evidence-mark { width: 8px; height: 8px; background: var(--cobalt); flex: none; }
 
@@ -372,9 +350,6 @@ a.chip:hover { border-color: var(--cobalt); color: var(--cobalt-dark); }
 .chip em { font-style: normal; font-size: 0.75rem; font-weight: 600; color: var(--graphite); border-left: 1px solid var(--rule); padding-left: 0.45rem; }
 .chip-learning { border-style: dashed; }
 
-.skill-matrix.filtering .chip:not(.hit) { opacity: 0.38; }
-.skill-matrix.filtering .skill-row:not(.has-hit) h3 { color: #8C99AB; }
-.chip.hit { background: #FFF1D2; border-color: #E59A00; color: var(--ink); }
 
 /* ---------- Certifications ---------- */
 .cert-list { list-style: none; margin: 0; padding: 0; }
@@ -482,7 +457,6 @@ a.chip:hover { border-color: var(--cobalt); color: var(--cobalt-dark); }
   .stages li { border-left: 0; border-top: 1px solid var(--rule); }
   .stages li:first-child { border-top: 0; }
   .stages li::after { display: none; }
-  .skill-check-row { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
   .site-footer a { margin-left: 0; margin-right: 1.25rem; }
 }
