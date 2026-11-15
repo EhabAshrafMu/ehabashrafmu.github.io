@@ -532,35 +532,171 @@
     <section class="section section-alt" id="skills" aria-labelledby="skills-title">
       <div class="wrap">
         <div class="section-head">
-          <h2 id="skills-title">What I work with</h2>
-          <p class="section-intro">Grouped by the job it does, so you can match it to the role you're hiring for.</p>
+          <h2 id="skills-title">Skills and tools</h2>
+          <p class="section-intro">
+            Paste your job description below to see which of your required tools I use. Marked tools appear in one of the
+            projects above, so you can open the code and check.
+          </p>
         </div>
 
-        <div class="skill-groups">
-          <section class="skill-group">
-            <h3>Cloud and architecture</h3>
-            <p>AWS: EC2, VPC, IAM, S3, RDS, Lambda, ECS, EKS, Fargate, ELB, CloudFormation, CloudWatch, SSM. Well-Architected design, multi-tier networking, security groups and NACLs. VMware vSphere, ESXi, vCenter.</p>
-          </section>
-          <section class="skill-group">
-            <h3>Delivery and automation</h3>
-            <p>Jenkins, GitHub Actions, GitLab CI/CD, ArgoCD and GitOps. Terraform modules and remote state, Ansible roles and Vault. Python and Bash. Trivy, SonarCloud and Terrascan as pipeline gates.</p>
-          </section>
-          <section class="skill-group">
-            <h3>Containers and platform</h3>
-            <p>Docker and Docker Compose, Kubernetes, Helm, Kustomize, Ingress, rolling updates, resource requests and limits. HashiCorp Vault and Sealed Secrets.</p>
-          </section>
-          <section class="skill-group">
-            <h3>Operations and reliability</h3>
-            <p>Production releases with rollback plans, change windows, incident and problem management (ITIL v4), root cause analysis, DR planning with RPO and RTO, Veeam backup and replication.</p>
-          </section>
-          <section class="skill-group">
-            <h3>Observability</h3>
-            <p>Prometheus, Grafana, Zabbix, CloudWatch, ELK. Custom application metrics, dashboards and log analysis.</p>
-          </section>
-          <section class="skill-group">
-            <h3>Systems and networking</h3>
-            <p>Linux (RHEL, Ubuntu), Windows Server, Active Directory and Group Policy, Nginx, Apache, IIS, MySQL, MongoDB. TCP/IP, DNS, DHCP and subnetting at CCNA level.</p>
-          </section>
+        <div class="skill-check">
+          <label for="skill-query" class="skill-check-label">Check your requirements</label>
+          <div class="skill-check-row">
+            <textarea id="skill-query" rows="3" spellcheck="false"
+              placeholder="Paste a job description, or type tools such as Terraform, Kubernetes, Azure"></textarea>
+            <button type="button" class="skill-clear" hidden>Clear</button>
+          </div>
+          <p class="skill-result" id="skill-result" aria-live="polite"></p>
+        </div>
+
+        <p class="skill-legend"><span class="evidence-mark" aria-hidden="true"></span>Used in a project on this page</p>
+
+        <div class="skill-matrix">
+          <div class="skill-row">
+            <h3>Cloud platforms</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#aws-pipeline" data-m="aws|amazon web services">AWS</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="ec2|elastic compute">EC2</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="vpc|virtual private cloud">VPC</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="s3">S3</a></li>
+              <li><span class="chip" data-m="iam|identity and access management">IAM</span></li>
+              <li><span class="chip" data-m="rds">RDS</span></li>
+              <li><span class="chip" data-m="lambda|serverless">Lambda</span></li>
+              <li><span class="chip" data-m="ecs">ECS</span></li>
+              <li><span class="chip" data-m="eks">EKS</span></li>
+              <li><span class="chip" data-m="fargate">Fargate</span></li>
+              <li><span class="chip" data-m="elb|alb|load balancer|load balancers|load balancing">ELB and ALB</span></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="ssm|parameter store|systems manager">SSM Parameter Store</a></li>
+              <li><span class="chip chip-learning" data-m="azure|az-104|microsoft azure|entra id" data-note="Azure: currently studying for AZ-104, Azure Administrator Associate">Microsoft Azure <em>learning</em></span></li>
+              <li><span class="chip" data-m="vmware|vsphere|esxi|vcenter|virtualization|virtualisation">VMware vSphere, ESXi, vCenter</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Infrastructure as code</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#aws-pipeline" data-m="terraform">Terraform</a></li>
+              <li><span class="chip" data-m="cloudformation|cfn">AWS CloudFormation</span></li>
+              <li><a class="chip" href="#mern-ansible" data-m="ansible|configuration management">Ansible</a></li>
+              <li><a class="chip" href="#mern-ansible" data-m="ansible vault">Ansible Vault</a></li>
+              <li><a class="chip" href="#mern-ansible" data-m="jinja|jinja2">Jinja2 templates</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="iac|infrastructure as code|infrastructure-as-code">Infrastructure as code</a></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>CI/CD and GitOps</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#hivebox" data-m="ci/cd|ci cd|cicd|continuous integration|continuous delivery|continuous deployment|pipeline|pipelines">CI/CD pipelines</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="jenkins">Jenkins</a></li>
+              <li><a class="chip" href="#hivebox" data-m="github actions|github">GitHub Actions</a></li>
+              <li><span class="chip" data-m="gitlab|gitlab ci|gitlab ci/cd">GitLab CI/CD</span></li>
+              <li><span class="chip" data-m="argocd|argo cd|argo">ArgoCD</span></li>
+              <li><span class="chip" data-m="gitops">GitOps</span></li>
+              <li><span class="chip" data-m="git|version control">Git</span></li>
+              <li><a class="chip" href="#hivebox" data-m="git flow|gitflow|branching strategy|branching strategies">Git Flow</a></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Containers and orchestration</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#hivebox" data-m="docker|container|containers|containerization|containerisation|containerized|containerised">Docker</a></li>
+              <li><a class="chip" href="#hivebox" data-m="docker compose|docker-compose">Docker Compose</a></li>
+              <li><a class="chip" href="#hivebox" data-m="kubernetes|k8s">Kubernetes</a></li>
+              <li><a class="chip" href="#hivebox" data-m="helm|helm charts">Helm</a></li>
+              <li><a class="chip" href="#hivebox" data-m="kustomize">Kustomize</a></li>
+              <li><a class="chip" href="#hivebox" data-m="ingress|ingress controller">NGINX Ingress</a></li>
+              <li><a class="chip" href="#hivebox" data-m="minikube">Minikube</a></li>
+              <li><span class="chip" data-m="microservice|microservices">Microservices</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Security and DevSecOps</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#hivebox" data-m="devsecops|security scanning|vulnerability scanning|shift left|shift-left">DevSecOps scanning</a></li>
+              <li><a class="chip" href="#hivebox" data-m="trivy|image scanning|container scanning">Trivy</a></li>
+              <li><a class="chip" href="#hivebox" data-m="sonarcloud|sonarqube|sonar|code quality|static analysis|sast">SonarCloud</a></li>
+              <li><a class="chip" href="#hivebox" data-m="terrascan|policy as code">Terrascan</a></li>
+              <li><span class="chip" data-m="hashicorp vault|vault|secrets management">HashiCorp Vault</span></li>
+              <li><span class="chip" data-m="sealed secrets|sealedsecrets">Sealed Secrets</span></li>
+              <li><span class="chip" data-m="security group|security groups|nacl|nacls|network acl|network acls">Security groups and NACLs</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Monitoring and observability</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#hivebox" data-m="prometheus">Prometheus</a></li>
+              <li><a class="chip" href="#hivebox" data-m="grafana">Grafana</a></li>
+              <li><span class="chip" data-m="cloudwatch">CloudWatch</span></li>
+              <li><span class="chip" data-m="zabbix">Zabbix</span></li>
+              <li><span class="chip" data-m="elk|elasticsearch|logstash|kibana|elastic stack">ELK Stack</span></li>
+              <li><a class="chip" href="#hivebox" data-m="monitoring|observability|alerting|metrics|logging|log analysis">Monitoring and alerting</a></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Programming and scripting</h3>
+            <ul class="chips">
+              <li><a class="chip" href="#hivebox" data-m="python">Python</a></li>
+              <li><span class="chip" data-m="bash|shell|shell scripting|scripting">Bash</span></li>
+              <li><a class="chip" href="#hivebox" data-m="fastapi">FastAPI</a></li>
+              <li><a class="chip" href="#hivebox" data-m="pytest|unit testing|unit tests|automated testing">pytest</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="node.js|nodejs">Node.js</a></li>
+              <li><span class="chip" data-m="yaml|json">YAML and JSON</span></li>
+              <li><span class="chip" data-m="rest api|rest apis|restful|api|apis">REST APIs</span></li>
+              <li><span class="chip" data-m="sql">SQL</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Systems and data</h3>
+            <ul class="chips">
+              <li><span class="chip" data-m="linux|linux administration">Linux</span></li>
+              <li><a class="chip" href="#mern-ansible" data-m="rhel|red hat|redhat">RHEL</a></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="ubuntu">Ubuntu</a></li>
+              <li><span class="chip" data-m="windows server|windows">Windows Server</span></li>
+              <li><span class="chip" data-m="active directory|ad ds|group policy|gpo">Active Directory and Group Policy</span></li>
+              <li><span class="chip" data-m="nginx">Nginx</span></li>
+              <li><span class="chip" data-m="apache|httpd">Apache</span></li>
+              <li><span class="chip" data-m="iis">IIS</span></li>
+              <li><span class="chip" data-m="kvm">KVM</span></li>
+              <li><span class="chip" data-m="mysql">MySQL</span></li>
+              <li><a class="chip" href="#mern-ansible" data-m="mongodb|mongo|nosql">MongoDB</a></li>
+              <li><a class="chip" href="#hivebox" data-m="redis|valkey|caching|cache">Redis and Valkey</a></li>
+              <li><a class="chip" href="#hivebox" data-m="minio|object storage">MinIO</a></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Networking</h3>
+            <ul class="chips">
+              <li><span class="chip" data-m="tcp/ip|tcp|networking|network">TCP/IP</span></li>
+              <li><span class="chip" data-m="dns">DNS</span></li>
+              <li><span class="chip" data-m="dhcp">DHCP</span></li>
+              <li><a class="chip" href="#aws-pipeline" data-m="subnetting|subnet|subnets|cidr|nat|nat gateway">Subnetting and NAT</a></li>
+              <li><span class="chip" data-m="ccna|routing|switching">CCNA-level routing and switching</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-row">
+            <h3>Operations and delivery</h3>
+            <ul class="chips">
+              <li><span class="chip" data-m="production support|application support|support engineer|l2 support|l3 support">Production support</span></li>
+              <li><span class="chip" data-m="release management|releases|release|deployment|deployments">Release management</span></li>
+              <li><span class="chip" data-m="incident management|incident|incidents|on-call|on call">Incident management</span></li>
+              <li><span class="chip" data-m="change management|change request|change requests|change window|change windows">Change management</span></li>
+              <li><span class="chip" data-m="root cause analysis|root cause|rca|troubleshooting">Root cause analysis</span></li>
+              <li><span class="chip" data-m="itil|itil v4|itsm|problem management">ITIL v4</span></li>
+              <li><span class="chip" data-m="disaster recovery|dr|rpo|rto|business continuity|backup|backups">DR planning, RPO and RTO</span></li>
+              <li><span class="chip" data-m="veeam">Veeam Backup and Replication</span></li>
+              <li><span class="chip" data-m="agile|scrum|kanban">Agile and Scrum</span></li>
+              <li><span class="chip" data-m="jira">Jira</span></li>
+              <li><span class="chip" data-m="power bi|powerbi">Power BI</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -626,6 +762,12 @@
             <div class="cert-main">
               <h3>VMware Certified Technical Associate – Data Center Virtualization</h3>
               <p class="cert-dates">VCTA-DCV</p>
+            </div>
+          </li>
+          <li class="cert cert-progress">
+            <div class="cert-main">
+              <h3>Microsoft Certified: Azure Administrator Associate</h3>
+              <p class="cert-dates">AZ-104, studying now</p>
             </div>
           </li>
         </ul>
