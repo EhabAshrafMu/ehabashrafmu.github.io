@@ -1,269 +1,198 @@
-// script.js - Enhanced with better error handling and performance optimizations
-document.addEventListener('DOMContentLoaded', () => {
-    // Utility function for safe element selection
-    const safeQuerySelector = (selector, parent = document) => {
-        try {
-            return parent.querySelector(selector);
-        } catch (error) {
-            console.warn(`Failed to select element: ${selector}`, error);
-            return null;
-        }
-    };
+(() => {
+  "use strict";
 
-    const safeQuerySelectorAll = (selector, parent = document) => {
-        try {
-            return parent.querySelectorAll(selector);
-        } catch (error) {
-            console.warn(`Failed to select elements: ${selector}`, error);
-            return [];
-        }
-    };
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    // Mobile menu toggle
-    const hamburger = safeQuerySelector('#hamburger');
-    const navMenu = safeQuerySelector('#nav-menu');
-    const navLinks = safeQuerySelectorAll('.nav-link');
+  /* ---------- Header: border on scroll, mobile menu, active link ---------- */
+  const header = document.querySelector(".site-header");
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-    const toggleMenu = () => {
-        if (!navMenu || !hamburger) return;
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        
-        // Update ARIA attributes for accessibility
-        const isExpanded = navMenu.classList.contains('active');
-        hamburger.setAttribute('aria-expanded', isExpanded);
-    };
+  const toggle = document.querySelector(".nav-toggle");
+  const navList = document.getElementById("nav-list");
+  toggle.addEventListener("click", () => {
+    const open = navList.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.textContent = open ? "Close" : "Menu";
+  });
+  navList.addEventListener("click", (e) => {
+    if (e.target.closest("a") && navList.classList.contains("open")) {
+      navList.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.textContent = "Menu";
+    }
+  });
 
-    if (hamburger) {
-        hamburger.addEventListener('click', toggleMenu);
-        
-        // Keyboard accessibility
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleMenu();
-            }
+  const navLinks = [...document.querySelectorAll('.nav-list a[href^="#"]')];
+  const sections = navLinks.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id));
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach((s) => spy.observe(s));
+  }
+
+  /* ---------- Role rotator ---------- */
+  const rotator = document.querySelector(".rotator");
+  if (rotator && !reduceMotion) {
+    const words = rotator.dataset.words.split("|");
+    let i = 0;
+    setInterval(() => {
+      rotator.classList.add("out");
+      setTimeout(() => {
+        i = (i + 1) % words.length;
+        rotator.textContent = words[i];
+        rotator.classList.remove("out");
+      }, 250);
+    }, 2600);
+  }
+
+  /* ---------- Copy validation numbers ---------- */
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const label = btn.querySelector("span");
+      try {
+        await navigator.clipboard.writeText(btn.dataset.copy);
+        label.textContent = "Copied";
+        btn.classList.add("done");
+      } catch {
+        label.textContent = "Select and copy";
+      }
+      setTimeout(() => { label.textContent = "Copy number"; btn.classList.remove("done"); }, 2000);
+    });
+  });
+
+  /* ---------- Blueprint tracer ----------
+     Each <li> in .flow-steps lists the edges a packet travels (data-hops,
+     "-id" means travel the edge backwards) and the nodes to light up. */
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  class Tracer {
+    constructor(project) {
+      this.sheet = project.querySelector(".sheet");
+      this.svg = project.querySelector(".drawing");
+      this.packet = this.svg.querySelector(".packet");
+      this.btn = project.querySelector(".trace-btn");
+      this.btnLabel = this.btn.querySelector("span");
+      this.btnIcon = this.btn.querySelector("use");
+      this.steps = [...project.querySelectorAll(".flow-steps li")];
+      this.run = 0;
+
+      this.btn.addEventListener("click", () => (this.playing ? this.stop() : this.playAll()));
+      this.steps.forEach((li, idx) => {
+        li.tabIndex = 0;
+        li.setAttribute("role", "button");
+        li.setAttribute("aria-label", `Show step ${idx + 1} on the drawing`);
+        const go = () => this.playOne(idx);
+        li.addEventListener("click", go);
+        li.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
         });
+      });
     }
 
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
+    get playing() { return this.btn.getAttribute("aria-pressed") === "true"; }
 
-    // Smooth active link highlight on scroll with throttling
-    const sections = safeQuerySelectorAll('section[id]');
-    let ticking = false;
+    setButton(playing, label) {
+      this.btn.setAttribute("aria-pressed", String(playing));
+      this.btnIcon.setAttribute("href", playing ? "#i-pause" : "#i-play");
+      this.btnLabel.textContent = label;
+    }
 
-    const onScroll = () => {
-        if (!ticking) {
-            requestAnimationFrame(() => {
-                let current = '';
-                const scrollPosition = window.pageYOffset + 100; // Offset for better detection
+    clear() {
+      this.svg.querySelectorAll(".lit").forEach((el) => el.classList.remove("lit"));
+      this.steps.forEach((li) => li.classList.remove("current"));
+      this.packet.classList.remove("on");
+    }
 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id');
-                    }
-                });
+    reset() {
+      this.clear();
+      this.sheet.classList.remove("tracing");
+    }
 
-                // Update active navigation link
-                const navLinks = safeQuerySelectorAll('.nav-link');
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (current && link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
+    stop() {
+      this.run++;
+      this.reset();
+      this.setButton(false, "Trace the flow");
+    }
 
-                ticking = false;
-            });
-            ticking = true;
-        }
-    };
+    async playAll() {
+      const token = ++this.run;
+      this.setButton(true, "Stop");
+      for (let i = 0; i < this.steps.length; i++) {
+        if (token !== this.run) return;
+        await this.showStep(i, token);
+        await sleep(reduceMotion ? 1800 : 650);
+      }
+      if (token !== this.run) return;
+      await sleep(600);
+      if (token !== this.run) return;
+      this.reset();
+      this.setButton(false, "Trace again");
+    }
 
-    // Use passive listener for better performance
-    window.addEventListener('scroll', onScroll, { passive: true });
+    async playOne(idx) {
+      const token = ++this.run;
+      this.setButton(false, "Trace the flow");
+      await this.showStep(idx, token);
+    }
 
-    // Enhanced counter animation with better performance
-    const counters = safeQuerySelectorAll('.stat-number');
-    const speed = 160; // smaller = faster
+    async showStep(idx, token) {
+      this.clear();
+      this.sheet.classList.add("tracing");
+      const li = this.steps[idx];
+      li.classList.add("current");
+      (li.dataset.nodes || "").split(",").filter(Boolean).forEach((id) => {
+        const n = this.svg.getElementById(id);
+        if (n) n.classList.add("lit");
+      });
+      const hops = (li.dataset.hops || "").split(",").filter(Boolean);
+      for (const hop of hops) {
+        if (token !== this.run) return;
+        const reverse = hop.startsWith("-");
+        const path = this.svg.getElementById(reverse ? hop.slice(1) : hop);
+        if (!path) continue;
+        path.classList.add("lit");
+        if (!reduceMotion) await this.travel(path, reverse, token);
+      }
+      this.packet.classList.remove("on");
+    }
 
-    const animateCount = (counter) => {
-        const target = parseInt(counter.getAttribute('data-target') || '0', 10);
-        const start = 0;
-        const step = Math.max(1, Math.floor(target / (speed / 10)));
-
-        let current = start;
-        const update = () => {
-            current += step;
-            if (current >= target) {
-                counter.innerText = target;
-            } else {
-                counter.innerText = current;
-                requestAnimationFrame(update);
-            }
+    travel(path, reverse, token) {
+      const len = path.getTotalLength();
+      const duration = Math.max(380, len * 2.6);
+      this.packet.classList.add("on");
+      return new Promise((resolve) => {
+        const start = performance.now();
+        const frame = (now) => {
+          if (token !== this.run) return resolve();
+          let t = Math.min(1, (now - start) / duration);
+          const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+          const p = path.getPointAtLength((reverse ? 1 - eased : eased) * len);
+          this.packet.setAttribute("cx", p.x);
+          this.packet.setAttribute("cy", p.y);
+          if (t < 1) requestAnimationFrame(frame); else resolve();
         };
-        update();
-    };
+        requestAnimationFrame(frame);
+      });
+    }
+  }
 
-    // Enhanced skill animations with intersection observer
-    const animateSkills = (root = document) => {
-        const skillItems = Array.from(root.querySelectorAll('.skill-item'));
-        skillItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-            }, index * 100);
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-        });
-    };
+  const tracers = [...document.querySelectorAll(".project")].map((p) => new Tracer(p));
 
-    // Skills category switching with improved UX
-    const skillCategories = safeQuerySelectorAll('.skill-category');
-    const skillGroups = safeQuerySelectorAll('.skill-group');
-
-    skillCategories.forEach(cat => {
-        cat.addEventListener('click', () => {
-            // Remove active class from all categories
-            skillCategories.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked category
-            cat.classList.add('active');
-            
-            const selected = cat.getAttribute('data-category');
-            
-            // Hide all skill groups
-            skillGroups.forEach(g => {
-                g.classList.remove('active');
-            });
-            
-            // Show selected skill group
-            skillGroups.forEach(g => {
-                if (g.getAttribute('data-group') === selected) {
-                    g.classList.add('active');
-                    // Animate skills in the selected group
-                    animateSkills(g);
-                }
-            });
-        });
-    });
-
-    // Enhanced intersection observer with better performance
-    const observerOptions = { 
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-
-            if (el.classList.contains('hero-stats')) {
-                counters.forEach(c => animateCount(c));
-            }
-            
-            if (el.classList.contains('skills-display')) {
-                animateSkills();
-            }
-            if (el.classList.contains('languages')) {
-                fillBars();
-            }
-            
-            // Unobserve to avoid repeated triggers
-            observer.unobserve(el);
-        });
-    }, observerOptions);
-
-    // Observe elements for animations
-    const heroStats = safeQuerySelector('.hero-stats');
-    const skillsDisplay = safeQuerySelector('.skills-display');
-    const languages = safeQuerySelector('.languages');
-
-    if (heroStats) observer.observe(heroStats);
-    if (skillsDisplay) observer.observe(skillsDisplay);
-    if (languages) observer.observe(languages);
-
-    // Initial animations for skills visible on load
-    animateSkills();
-
-    // Ensure nav highlight runs once on load
-    onScroll();
-
-    // Add smooth scrolling for anchor links
-    const anchorLinks = safeQuerySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const href = link.getAttribute('href');
-            if (href === '#') return;
-            
-            const target = safeQuerySelector(href);
-            if (target) {
-                e.preventDefault();
-                const offsetTop = target.offsetTop - 80; // Account for fixed navbar
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Add loading animation for images (if any are added later)
-    const images = safeQuerySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('load', () => {
-            img.classList.add('loaded');
-        });
-    });
-
-    // Add keyboard navigation for skill categories
-    skillCategories.forEach(cat => {
-        cat.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                cat.click();
-            }
-        });
-    });
-
-    // Performance optimization: Debounce scroll events
-    let scrollTimeout;
-    const debouncedScroll = () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(onScroll, 10);
-    };
-    
-    // Replace the original scroll listener with debounced version
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', debouncedScroll, { passive: true });
-
-    // Add error handling for missing elements
-    const requiredElements = [
-        { selector: '#hamburger', name: 'Hamburger menu' },
-        { selector: '#nav-menu', name: 'Navigation menu' },
-        { selector: '.hero-stats', name: 'Hero stats' }
-    ];
-
-    requiredElements.forEach(({ selector, name }) => {
-        if (!safeQuerySelector(selector)) {
-            console.warn(`${name} element not found: ${selector}`);
-        }
-    });
-
-    // Add console log for successful initialization
-    console.log('Portfolio website initialized successfully');
-});
-  
+  // One orchestrated moment: the first drawing traces itself once when it comes into view.
+  if (!reduceMotion && tracers[0] && "IntersectionObserver" in window) {
+    const first = tracers[0];
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) {
+        io.disconnect();
+        if (!first.playing && first.run === 0) first.playAll();
+      }
+    }, { threshold: 0.6 });
+    io.observe(first.sheet);
+  }
+})();

@@ -1,970 +1,681 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ehab Ashraf Muhammed | DevOps Engineer</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="DevOps Engineer specializing in AWS, Docker, Kubernetes, CI/CD automation, and cloud infrastructure. Currently supporting production banking systems at HDBank." />
-    <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Docker, Kubernetes, Infrastructure, Automation, CI/CD, Terraform, Ansible" />
-    <meta name="author" content="Ehab Ashraf Muhammed" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ehabashrafmu.github.io/" />
-    <meta property="og:title" content="Ehab Ashraf Muhammed | DevOps Engineer" />
-    <meta property="og:description" content="DevOps Engineer specializing in AWS, Docker, Kubernetes, CI/CD automation, and cloud infrastructure." />
-    <meta property="og:image" content="https://ehabashrafmu.github.io/image.jpg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ehabashrafmu.github.io/" />
-    <meta property="twitter:title" content="Ehab Ashraf Muhammed | DevOps Engineer" />
-    <meta property="twitter:description" content="DevOps Engineer specializing in AWS, Docker, Kubernetes, CI/CD automation, and cloud infrastructure." />
-    <meta property="twitter:image" content="https://ehabashrafmu.github.io/image.jpg" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ehab Ashraf Muhammed | Cloud &amp; DevOps Engineer</title>
+  <meta name="description" content="Cloud and DevOps engineer in Cairo. AWS Certified Solutions Architect – Professional. Production deployments for banking apps, CI/CD, Terraform, Kubernetes and AWS. Open to roles in Egypt, Saudi Arabia, the Gulf, Europe and remote." />
+  <meta name="author" content="Ehab Ashraf Muhammed" />
+  <meta name="theme-color" content="#0F2B56" />
+  <link rel="canonical" href="https://ehabashrafmu.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ehabashrafmu.github.io/" />
+  <meta property="og:title" content="Ehab Ashraf Muhammed | Cloud & DevOps Engineer" />
+  <meta property="og:description" content="AWS Certified Solutions Architect – Professional. CI/CD, Terraform, Kubernetes and production operations. See the architecture behind each project." />
+  <meta property="og:image" content="https://ehabashrafmu.github.io/assets/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ehab Ashraf Muhammed | Cloud & DevOps Engineer" />
+  <meta name="twitter:description" content="AWS Certified Solutions Architect – Professional. CI/CD, Terraform, Kubernetes and production operations." />
+  <meta name="twitter:image" content="https://ehabashrafmu.github.io/assets/og-card.png" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ehab Ashraf Muhammed",
+    "jobTitle": "Cloud & DevOps Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG" },
+    "url": "https://ehabashrafmu.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/ehab-ashraf-mu", "https://github.com/EhabAshrafMu"],
+    "hasCredential": [
+      { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Solutions Architect – Professional" },
+      { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Solutions Architect – Associate" },
+      { "@type": "EducationalOccupationalCredential", "name": "AWS Certified Cloud Practitioner" }
+    ]
+  }
+  </script>
 </head>
-
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#home" class="skip-link">Skip to main content</a>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-bracket">&lt;</span>
-                <span class="logo-name">Ehab</span>
-                <span class="logo-bracket">/&gt;</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting">Hello, I'm</p>
-                    <h1 class="hero-name">Ehab Ashraf Muhammed</h1>
-                    <h2 class="hero-title">DevOps Engineer | Cloud Infrastructure | CI/CD Automation</h2>
-                    <p class="hero-description">
-                        AWS-certified DevOps Engineer with production experience supporting critical banking systems.
-                        Hands-on with Docker, Kubernetes, Terraform, Ansible, and GitHub Actions.
-                        DEPI Top Achiever. Open to remote and on-site roles globally.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
-                        </a>
-                        <a href="Ehab_Ashraf_DevOps_Engineer.pdf" download class="btn-secondary">
-                            <i class="fas fa-download"></i>
-                            Download Resume
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit LinkedIn profile">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.github.com/EhabAshrafMu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit GitHub profile">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="image-placeholder">
-                            <img src="image.jpg" alt="Ehab Ashraf Muhammed" class="profile-image">
-                        </div>
-                        <div class="floating-icons">
-                            <div class="floating-icon" style="--delay: 0s">
-                                <i class="fab fa-aws"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 2s">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 4s">
-                                <i class="fas fa-dharmachakra"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 6s">
-                                <i class="fab fa-jenkins"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Shared icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3 5.5h18v13H3z M3.5 6l8.5 7 8.5-7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3.5v11 M7 10l5 5 5-5 M4.5 19.5h15"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.6 4.77 6V21h-4v-5c0-1.2-.02-2.73-1.67-2.73-1.67 0-1.93 1.3-1.93 2.64V21h-4z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2.2z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M14 4.5h5.5V10 M19.5 4.5L11 13 M17 14v5.5H4.5V7H10"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M8.5 8.5h11v11h-11z M15.5 8.5v-4h-11v11h4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12.5-7.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z"/></symbol>
+  </svg>
+
+  <!-- Blueprint arrow markers (shared by all drawings) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0L10 5L0 10z" fill="#8FB3EE"/>
+      </marker>
+      <marker id="arrow-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0L10 5L0 10z" fill="#FFB938"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">Ehab Ashraf</a>
+      <nav aria-label="Main">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn btn-small" href="Ehab_Ashraf_DevOps_Engineer.pdf" download>Download CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="hero-role">Cloud &amp; DevOps Engineer, Cairo</p>
+          <h1 class="hero-name">Ehab Ashraf Muhammed</h1>
+          <p class="hero-lead">
+            I run production deployments for a national bank's customer-facing web apps, and I build the pipelines,
+            infrastructure code and Kubernetes setups that keep releases predictable.
+            AWS Certified Solutions Architect – Professional.
+          </p>
+
+          <p class="hero-hiring">
+            Hiring a <span class="rotator" data-words="DevOps engineer|Cloud engineer|Platform engineer|Infrastructure engineer|Site reliability engineer">DevOps engineer</span>?
+            I'd like to hear about it.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:ehabxm25@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email me
+            </a>
+            <a class="btn btn-secondary" href="Ehab_Ashraf_DevOps_Engineer.pdf" download>
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Download CV
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            </a>
+            <a class="icon-link" href="https://github.com/EhabAshrafMu" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            </a>
+          </div>
+
+          <p class="availability">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to roles in Egypt, Saudi Arabia, the Gulf, Europe and remote.
+          </p>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <p>Scroll Down</p>
-        </div>
+
+        <figure class="hero-photo">
+          <picture>
+            <source srcset="assets/ehab.webp" type="image/webp" />
+            <img src="assets/ehab.jpg" width="720" height="900" alt="Ehab Ashraf Muhammed" />
+          </picture>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <ul class="credential-bar" aria-label="Key credentials">
+          <li class="cred cred-lead">
+            <span class="cred-title">AWS Solutions Architect – Professional</span>
+            <span class="cred-meta">SAP-C02, earned Sep 2026</span>
+          </li>
+          <li class="cred">
+            <span class="cred-title">AWS Solutions Architect – Associate</span>
+            <span class="cred-meta">SAA-C03</span>
+          </li>
+          <li class="cred">
+            <span class="cred-title">AWS Cloud Practitioner</span>
+            <span class="cred-meta">CLF-C01</span>
+          </li>
+          <li class="cred">
+            <span class="cred-title">VMware VCTA-DCV</span>
+            <span class="cred-meta">Data center virtualization</span>
+          </li>
+          <li class="cred">
+            <span class="cred-title">DEPI DevOps, Top Achiever</span>
+            <span class="cred-meta">Ministry of CIT, 2025</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">DevOps Engineer focused on production reliability and infrastructure automation</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a DevOps and Cloud Engineer currently supporting the production deployment and operations
-                        of critical banking applications and financial systems at one of Egypt's leading banks —
-                        working across web applications, databases, fraud detection platforms, and core banking
-                        upgrade cycles.
-                    </p>
-                    <p>
-                        My focus is on CI/CD automation, cloud infrastructure, and keeping production systems
-                        reliable. I hold two AWS certifications (Solutions Architect – Associate and Cloud
-                        Practitioner) alongside a VMware VCTA, and I graduated as a Top Achiever from the
-                        DEPI DevOps programme run by Egypt's Ministry of Communications &amp; IT.
-                    </p>
-                    <div class="philosophy">
-                        <h3>DevOps Philosophy</h3>
-                        <p>"Automation is not about replacing humans, but about enabling them to focus on what matters
-                            most — innovation and creativity."</p>
-                    </div>
-                    <div class="languages">
-                        <h3>Languages</h3>
-                        <div class="language-list">
-                            <div class="language-item">
-                                <span class="language-name">Arabic</span>
-                                <span class="language-level">Native Proficiency</span>
-                            </div>
-                            <div class="language-item">
-                                <span class="language-name">English</span>
-                                <span class="language-level">Fluent — C2 Level</span>
-                            </div>
-                            <div class="language-item">
-                                <span class="language-name">German</span>
-                                <span class="language-level">Intermediate — B1 Level</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="tech-orbit">
-                        <div class="orbit-center">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <div class="orbit orbit-1">
-                            <div class="orbit-item"><i class="fab fa-aws"></i></div>
-                            <div class="orbit-item"><i class="fab fa-docker"></i></div>
-                            <div class="orbit-item"><i class="fas fa-dharmachakra"></i></div>
-                        </div>
-                        <div class="orbit orbit-2">
-                            <div class="orbit-item"><i class="fab fa-jenkins"></i></div>
-                            <div class="orbit-item"><i class="fab fa-git-alt"></i></div>
-                            <div class="orbit-item"><i class="fas fa-terminal"></i></div>
-                            <div class="orbit-item"><i class="fab fa-python"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="work-title">Projects, drawn to show how they work</h2>
+          <p class="section-intro">
+            I started my career reading construction drawings, so I document systems the same way.
+            Press <strong>Trace the flow</strong> on any sheet to follow a request or a deployment through it, step by step.
+          </p>
         </div>
+
+        <!-- ---------- Project 1: HiveBox ---------- -->
+        <article class="project" id="hivebox" data-diagram="hivebox">
+          <header class="project-head">
+            <h3>HiveBox</h3>
+            <p class="project-summary">
+              A FastAPI service that turns live readings from public beehive sensors into a hive temperature status,
+              shipped through a gated CI pipeline and deployed to Kubernetes with caching, object storage and metrics.
+            </p>
+          </header>
+
+          <div class="sheet">
+            <div class="sheet-toolbar">
+              <button class="trace-btn" type="button" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Trace the flow</span>
+              </button>
+              <span class="swipe-hint">Swipe to see the whole drawing</span>
+            </div>
+            <div class="sheet-scroll">
+              <svg class="drawing" viewBox="0 0 1000 540" role="img" aria-labelledby="hb-title hb-desc">
+                <title id="hb-title">HiveBox runtime architecture</title>
+                <desc id="hb-desc">A client request enters a Minikube Kubernetes cluster through NGINX Ingress, reaches a ClusterIP service and two FastAPI replicas. The API reads from a Valkey cache, fetches from the openSenseMap API on a miss, stores snapshots in MinIO, and exposes Prometheus metrics that Grafana Agent ships to Grafana Cloud.</desc>
+
+                <!-- boundaries -->
+                <g class="boundary">
+                  <rect x="200" y="36" width="570" height="470"/>
+                  <text x="214" y="58">Kubernetes cluster (Minikube)</text>
+                </g>
+                <g class="boundary boundary-inner">
+                  <rect x="565" y="140" width="185" height="230"/>
+                  <text x="577" y="160">Deployment, 2 replicas</text>
+                </g>
+
+                <!-- edges -->
+                <path class="edge" id="hb-e1" d="M160 262 H230" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e2" d="M370 262 H405" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e3" d="M525 262 H548 V222 H585" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e4" d="M610 350 V384 H305 V410" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e5" d="M715 205 H790 V155 H810" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e6" d="M650 350 V396 H485 V410" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e7" d="M700 350 V410" marker-end="url(#arrow)"/>
+                <path class="edge" id="hb-e8" d="M745 442 H810" marker-end="url(#arrow)"/>
+
+                <!-- nodes -->
+                <g class="node" id="hb-client"><rect x="30" y="230" width="130" height="64"/><text x="95" y="258">Client</text><text class="sub" x="95" y="277">GET /temperature</text></g>
+                <g class="node" id="hb-ingress"><rect x="230" y="230" width="140" height="64"/><text x="300" y="258">NGINX Ingress</text><text class="sub" x="300" y="277">hivebox.local</text></g>
+                <g class="node" id="hb-svc"><rect x="405" y="230" width="120" height="64"/><text x="465" y="258">Service</text><text class="sub" x="465" y="277">ClusterIP :80</text></g>
+                <g class="node" id="hb-pod1"><rect x="585" y="180" width="130" height="66"/><text x="650" y="207">FastAPI pod</text><text class="sub" x="650" y="226">/temperature</text></g>
+                <g class="node" id="hb-pod2"><rect x="585" y="280" width="130" height="70"/><text x="650" y="307">FastAPI pod</text><text class="sub" x="650" y="326">+ scheduler</text></g>
+                <g class="node" id="hb-valkey"><rect x="230" y="410" width="150" height="64"/><text x="305" y="438">Valkey</text><text class="sub" x="305" y="457">cache, 5 min TTL</text></g>
+                <g class="node" id="hb-minio"><rect x="410" y="410" width="150" height="64"/><text x="485" y="438">MinIO</text><text class="sub" x="485" y="457">S3 bucket</text></g>
+                <g class="node" id="hb-agent"><rect x="595" y="410" width="150" height="64"/><text x="670" y="438">Grafana Agent</text><text class="sub" x="670" y="457">scrapes /metrics</text></g>
+                <g class="node node-ext" id="hb-osm"><rect x="810" y="120" width="165" height="70"/><text x="892" y="149">openSenseMap API</text><text class="sub" x="892" y="168">3 senseBoxes</text></g>
+                <g class="node node-ext" id="hb-grafana"><rect x="810" y="407" width="165" height="70"/><text x="892" y="436">Grafana Cloud</text><text class="sub" x="892" y="455">metrics + dashboards</text></g>
+
+                <circle class="packet" r="6" cx="-20" cy="-20"/>
+              </svg>
+            </div>
+            <dl class="title-block">
+              <div><dt>Drawing</dt><dd>HB-01 Runtime</dd></div>
+              <div><dt>Project</dt><dd>HiveBox</dd></div>
+              <div><dt>Scale</dt><dd>Not to scale</dd></div>
+              <div><dt>Drawn by</dt><dd>E. Ashraf</dd></div>
+            </dl>
+          </div>
+
+          <ol class="flow-steps">
+            <li data-hops="hb-e1,hb-e2,hb-e3" data-nodes="hb-client,hb-ingress,hb-svc,hb-pod1"><strong>Request in.</strong> A client calls <code>GET /temperature</code>. NGINX Ingress routes it to the Service, which balances across two FastAPI replicas.</li>
+            <li data-hops="hb-e4,-hb-e4" data-nodes="hb-pod2,hb-valkey"><strong>Cache first.</strong> The API checks Valkey. A hit returns the cached average straight away; entries live for 5 minutes.</li>
+            <li data-hops="hb-e5,-hb-e5,hb-e4" data-nodes="hb-pod1,hb-osm,hb-valkey"><strong>Fetch on a miss.</strong> It pulls the latest temperature from three senseBoxes, drops readings older than 7 days, averages the rest and caches the result.</li>
+            <li data-hops="-hb-e3,-hb-e2,-hb-e1" data-nodes="hb-pod1,hb-client"><strong>Answer.</strong> The response carries the average and a hive status: too cold, good or too hot.</li>
+            <li data-hops="hb-e6" data-nodes="hb-pod2,hb-minio"><strong>Archive.</strong> A background scheduler writes a JSON snapshot to a MinIO S3 bucket every 5 minutes.</li>
+            <li data-hops="hb-e7,hb-e8" data-nodes="hb-agent,hb-grafana"><strong>Observe.</strong> Custom Prometheus metrics (cache hits and misses, current temperature, upstream errors) are scraped by Grafana Agent and sent to Grafana Cloud.</li>
+          </ol>
+
+          <div class="pipeline" aria-label="HiveBox CI pipeline">
+            <h4>CI pipeline on GitHub Actions</h4>
+            <ol class="stages">
+              <li><span class="stage-name">Lint and test</span><span class="stage-detail">Pylint, pytest unit and integration tests, endpoint checks</span></li>
+              <li><span class="stage-name">Quality gates</span><span class="stage-detail">SonarCloud with coverage, Terrascan on K8s manifests, in parallel</span></li>
+              <li><span class="stage-name">Build and smoke test</span><span class="stage-detail">Docker image run and probed on /, /version, /readyz</span></li>
+              <li><span class="stage-name">Image scan</span><span class="stage-detail">Trivy, results uploaded to GitHub code scanning</span></li>
+              <li><span class="stage-name">Publish</span><span class="stage-detail">Pushed to Docker Hub, tagged with the commit SHA</span></li>
+              <li><span class="stage-name">Promote</span><span class="stage-detail">Kubernetes manifest updated to the new tag</span></li>
+            </ol>
+          </div>
+
+          <footer class="project-foot">
+            <p class="stack"><span class="stack-label">Built with</span> Python, FastAPI, Docker, Kubernetes, Kustomize, Helm, GitHub Actions, SonarCloud, Terrascan, Trivy, Valkey, MinIO, Prometheus, Grafana, Git Flow</p>
+            <a class="repo-link" href="https://github.com/EhabAshrafMu/devops-hands-on-project-hivebox" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View the code
+            </a>
+          </footer>
+        </article>
+
+        <!-- ---------- Project 2: Node.js on AWS ---------- -->
+        <article class="project" id="aws-pipeline" data-diagram="aws">
+          <header class="project-head">
+            <h3>Node.js delivery pipeline on AWS</h3>
+            <p class="project-summary">
+              A private, bastion-protected AWS environment built with modular Terraform, configured with Ansible and
+              deployed by Jenkins, with remote state, a manual approval gate before every apply and an SSH key generated and stored by code.
+            </p>
+          </header>
+
+          <div class="sheet">
+            <div class="sheet-toolbar">
+              <button class="trace-btn" type="button" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Trace the flow</span>
+              </button>
+              <span class="swipe-hint">Swipe to see the whole drawing</span>
+            </div>
+            <div class="sheet-scroll">
+              <svg class="drawing" viewBox="0 0 1000 540" role="img" aria-labelledby="aws-title aws-desc">
+                <title id="aws-title">Node.js on AWS architecture</title>
+                <desc id="aws-desc">Jenkins runs Terraform with state in S3 to build a VPC with a public subnet holding a bastion host and NAT gateway and a private subnet holding the application server. The SSH key is stored in SSM Parameter Store. Ansible and Jenkins reach the private server only through the bastion.</desc>
+
+                <g class="boundary">
+                  <rect x="198" y="30" width="790" height="494"/>
+                  <text x="830" y="512">AWS region</text>
+                </g>
+                <g class="boundary boundary-inner">
+                  <rect x="230" y="70" width="560" height="420"/>
+                  <text x="244" y="478">VPC, Terraform network module</text>
+                </g>
+                <g class="boundary boundary-sub">
+                  <rect x="258" y="140" width="232" height="300"/>
+                  <text x="270" y="160">Public subnet</text>
+                </g>
+                <g class="boundary boundary-sub">
+                  <rect x="530" y="140" width="232" height="300"/>
+                  <text x="542" y="160">Private subnet</text>
+                </g>
+
+                <!-- edges -->
+                <path class="edge" id="aw-dev" d="M85 96 V125" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-gh" d="M85 181 V205" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-state" d="M150 214 H182 V14 H800 V122 H815" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-ssm" d="M150 214 H182 V14 H800 V262 H815" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-prov" d="M150 262 H228" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-deploy" d="M150 236 H290" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-ans" d="M150 423 H272 V252 H290" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-jump" d="M460 232 H555" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-nat" d="M645 320 V382 H460" marker-end="url(#arrow)"/>
+                <path class="edge" id="aw-igw" d="M460 398 H510 V92" marker-end="url(#arrow)"/>
+
+                <!-- nodes -->
+                <g class="node node-ext" id="aw-n-dev"><rect x="20" y="40" width="130" height="56"/><text x="85" y="65">Developer</text><text class="sub" x="85" y="83">git push</text></g>
+                <g class="node node-ext" id="aw-n-gh"><rect x="20" y="125" width="130" height="56"/><text x="85" y="150">GitHub</text><text class="sub" x="85" y="168">app + infra code</text></g>
+                <g class="node node-ext" id="aw-n-jenkins"><rect x="20" y="205" width="130" height="80"/><text x="85" y="238">Jenkins</text><text class="sub" x="85" y="257">infra + deploy</text><text class="sub" x="85" y="273">pipelines</text></g>
+                <g class="node node-ext" id="aw-n-ansible"><rect x="20" y="395" width="130" height="56"/><text x="85" y="420">Ansible</text><text class="sub" x="85" y="438">via ProxyCommand</text></g>
+
+                <g class="node" id="aw-n-igw"><rect x="440" y="50" width="150" height="42"/><text x="515" y="76">Internet Gateway</text></g>
+                <g class="node" id="aw-n-bastion"><rect x="290" y="200" width="170" height="64"/><text x="375" y="228">Bastion host</text><text class="sub" x="375" y="247">EC2, public IP</text></g>
+                <g class="node" id="aw-n-nat"><rect x="290" y="350" width="170" height="64"/><text x="375" y="378">NAT Gateway</text><text class="sub" x="375" y="397">outbound only</text></g>
+                <g class="node" id="aw-n-app"><rect x="555" y="196" width="180" height="124"/><text x="645" y="224">App server</text><text class="sub" x="645" y="243">EC2, no public IP</text>
+                  <rect class="inner" x="575" y="256" width="140" height="48"/><text class="sub" x="645" y="277">Docker container</text><text class="sub" x="645" y="293">node app :3000</text></g>
+                <g class="node" id="aw-n-s3"><rect x="815" y="92" width="160" height="60"/><text x="895" y="118">S3 backend</text><text class="sub" x="895" y="137">state + lockfile</text></g>
+                <g class="node" id="aw-n-ssm"><rect x="815" y="232" width="160" height="60"/><text x="895" y="258">SSM Parameter</text><text class="sub" x="895" y="277">SSH key, encrypted</text></g>
+
+                <circle class="packet" r="6" cx="-20" cy="-20"/>
+              </svg>
+            </div>
+            <dl class="title-block">
+              <div><dt>Drawing</dt><dd>AW-01 Infrastructure</dd></div>
+              <div><dt>Project</dt><dd>Node.js on AWS</dd></div>
+              <div><dt>Scale</dt><dd>Not to scale</dd></div>
+              <div><dt>Drawn by</dt><dd>E. Ashraf</dd></div>
+            </dl>
+          </div>
+
+          <ol class="flow-steps">
+            <li data-hops="aw-dev,aw-gh,aw-state" data-nodes="aw-n-jenkins,aw-n-s3"><strong>Plan, review, apply.</strong> A Jenkins pipeline runs Terraform init, format check, validate and plan, then waits for a person to approve before applying. State sits in an encrypted S3 backend with locking.</li>
+            <li data-hops="aw-prov" data-nodes="aw-n-igw,aw-n-bastion,aw-n-nat,aw-n-app"><strong>Network and compute.</strong> A reusable network module creates the VPC, public and private subnets, Internet Gateway, NAT Gateway and route tables, then a bastion host and a private app server.</li>
+            <li data-hops="aw-ssm" data-nodes="aw-n-ssm"><strong>Keys handled by code.</strong> Terraform generates a 4096-bit SSH key pair and stores the private key in SSM Parameter Store as a SecureString.</li>
+            <li data-hops="aw-ans,aw-jump" data-nodes="aw-n-ansible,aw-n-bastion,aw-n-app"><strong>Configure.</strong> Ansible reaches the private server through the bastion and installs Docker and Git. The app server only accepts SSH from the bastion's security group.</li>
+            <li data-hops="aw-dev,aw-gh,aw-deploy,aw-jump" data-nodes="aw-n-jenkins,aw-n-bastion,aw-n-app"><strong>Deploy.</strong> The deploy pipeline jumps through the bastion, ships the code, builds an image tagged with the build number and swaps the running container on port 3000.</li>
+            <li data-hops="aw-nat,aw-igw" data-nodes="aw-n-app,aw-n-nat,aw-n-igw"><strong>Verify and stay private.</strong> A final stage confirms the container is running. The app server has no public IP; its outbound traffic leaves through the NAT Gateway.</li>
+          </ol>
+
+          <div class="pipeline" aria-label="Jenkins pipelines">
+            <h4>Infrastructure pipeline</h4>
+            <ol class="stages stages-short">
+              <li><span class="stage-name">Init</span><span class="stage-detail">S3 backend</span></li>
+              <li><span class="stage-name">Format check</span><span class="stage-detail">terraform fmt</span></li>
+              <li><span class="stage-name">Validate</span><span class="stage-detail">terraform validate</span></li>
+              <li><span class="stage-name">Plan</span><span class="stage-detail">saved plan file</span></li>
+              <li><span class="stage-name">Approve</span><span class="stage-detail">manual review</span></li>
+              <li><span class="stage-name">Apply</span><span class="stage-detail">outputs exported</span></li>
+            </ol>
+            <h4>Deploy pipeline</h4>
+            <ol class="stages stages-short">
+              <li><span class="stage-name">Checkout</span><span class="stage-detail">clean workspace</span></li>
+              <li><span class="stage-name">Jump</span><span class="stage-detail">SSH via bastion</span></li>
+              <li><span class="stage-name">Build</span><span class="stage-detail">image tag = build no.</span></li>
+              <li><span class="stage-name">Replace</span><span class="stage-detail">restart policy set</span></li>
+              <li><span class="stage-name">Verify</span><span class="stage-detail">container running</span></li>
+              <li><span class="stage-name">Clean up</span><span class="stage-detail">prune old images</span></li>
+            </ol>
+          </div>
+
+          <footer class="project-foot">
+            <p class="stack"><span class="stack-label">Built with</span> Terraform, AWS (VPC, EC2, NAT Gateway, S3, SSM Parameter Store, IAM), Jenkins, Ansible, Docker, Node.js</p>
+            <a class="repo-link" href="https://github.com/EhabAshrafMu/nodejs_pipeline_on_aws" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View the code
+            </a>
+          </footer>
+        </article>
+
+        <!-- ---------- Project 3: MERN with Ansible ---------- -->
+        <article class="project" id="mern-ansible" data-diagram="mern">
+          <header class="project-head">
+            <h3>Two-tier MERN stack with Ansible roles</h3>
+            <p class="project-summary">
+              One playbook that builds a web tier and a database tier on separate Linux hosts from scratch, with
+              reusable roles, group variables and a Vault-encrypted database password.
+            </p>
+          </header>
+
+          <div class="sheet">
+            <div class="sheet-toolbar">
+              <button class="trace-btn" type="button" aria-pressed="false">
+                <svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Trace the flow</span>
+              </button>
+              <span class="swipe-hint">Swipe to see the whole drawing</span>
+            </div>
+            <div class="sheet-scroll">
+              <svg class="drawing" viewBox="0 0 1000 470" role="img" aria-labelledby="mn-title mn-desc">
+                <title id="mn-title">MERN stack provisioning with Ansible</title>
+                <desc id="mn-desc">An Ansible control node runs three plays: a common role on all hosts, a webserver role on the web host and a dbserver role on the database host, using a Vault-encrypted MongoDB password. Users reach the React app served by PM2.</desc>
+
+                <g class="boundary">
+                  <rect x="320" y="30" width="350" height="190"/>
+                  <text x="334" y="52">Inventory group: webservers</text>
+                </g>
+                <g class="boundary">
+                  <rect x="320" y="250" width="350" height="190"/>
+                  <text x="334" y="272">Inventory group: dbservers</text>
+                </g>
+
+                <path class="edge" id="mn-e-web" d="M200 210 H262 V132 H350" marker-end="url(#arrow)"/>
+                <path class="edge" id="mn-e-db" d="M200 250 H262 V352 H350" marker-end="url(#arrow)"/>
+                <path class="edge" id="mn-e-vault" d="M115 352 V284" marker-end="url(#arrow)"/>
+                <path class="edge" id="mn-e-user" d="M790 132 H640" marker-end="url(#arrow)"/>
+
+                <g class="node node-ext" id="mn-n-ctrl"><rect x="30" y="186" width="170" height="96"/><text x="115" y="216">Ansible control</text><text class="sub" x="115" y="236">playbook.yaml</text><text class="sub" x="115" y="252">inventory, group_vars</text><text class="sub" x="115" y="268">3 roles</text></g>
+                <g class="node node-ext" id="mn-n-vault"><rect x="30" y="352" width="170" height="60"/><text x="115" y="378">Ansible Vault</text><text class="sub" x="115" y="397">Mongo root password</text></g>
+
+                <g class="node" id="mn-n-web"><rect x="350" y="70" width="290" height="130"/><text x="495" y="98">webserver01</text>
+                  <text class="sub" x="495" y="120">roles: common, webserver</text>
+                  <rect class="inner" x="372" y="134" width="246" height="52"/><text class="sub" x="495" y="156">Node.js, Express, PM2</text><text class="sub" x="495" y="174">React app from templates</text></g>
+                <g class="node" id="mn-n-db"><rect x="350" y="290" width="290" height="130"/><text x="495" y="318">dbserver01</text>
+                  <text class="sub" x="495" y="340">roles: common, dbserver</text>
+                  <rect class="inner" x="372" y="354" width="246" height="52"/><text class="sub" x="495" y="376">MongoDB, auth enabled</text><text class="sub" x="495" y="394">templated mongod.conf</text></g>
+                <g class="node node-ext" id="mn-n-user"><rect x="790" y="100" width="180" height="64"/><text x="880" y="128">Users</text><text class="sub" x="880" y="147">React UI, port 3000</text></g>
+
+                <circle class="packet" r="6" cx="-20" cy="-20"/>
+              </svg>
+            </div>
+            <dl class="title-block">
+              <div><dt>Drawing</dt><dd>MN-01 Provisioning</dd></div>
+              <div><dt>Project</dt><dd>MERN with Ansible</dd></div>
+              <div><dt>Scale</dt><dd>Not to scale</dd></div>
+              <div><dt>Drawn by</dt><dd>E. Ashraf</dd></div>
+            </dl>
+          </div>
+
+          <ol class="flow-steps">
+            <li data-hops="mn-e-web,mn-e-db" data-nodes="mn-n-ctrl,mn-n-web,mn-n-db"><strong>Baseline every host.</strong> Play one runs the common role everywhere: full package update, a dedicated <code>mern</code> user and group, and an SSH key for that user.</li>
+            <li data-hops="mn-e-web" data-nodes="mn-n-ctrl,mn-n-web"><strong>Build the web tier.</strong> Play two installs Node.js, Express, create-react-app and PM2, then renders the app's <code>App.js</code> and CSS from variables in <code>group_vars</code>.</li>
+            <li data-hops="mn-e-vault,mn-e-db" data-nodes="mn-n-vault,mn-n-ctrl,mn-n-db"><strong>Build the data tier.</strong> Play three installs MongoDB, templates <code>mongod.conf</code>, creates the root user from the Vault-encrypted password and switches authentication on.</li>
+            <li data-hops="mn-e-user,-mn-e-user" data-nodes="mn-n-user,mn-n-web"><strong>Serve.</strong> PM2 keeps the React app running and listening on all interfaces. Re-running the playbook converges both hosts to the same state.</li>
+          </ol>
+
+          <footer class="project-foot">
+            <p class="stack"><span class="stack-label">Built with</span> Ansible roles, group variables, Jinja2 templates, Ansible Vault, MongoDB, Node.js, Express, React, PM2, RHEL</p>
+            <a class="repo-link" href="https://github.com/EhabAshrafMu/MERN_stack_depolyment_using_Ansible_Roles" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View the code
+            </a>
+          </footer>
+        </article>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Building expertise through hands-on experience</p>
-            </div>
-            <div class="timeline">
-
-                <!-- HDBank — NEW -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Application Support Engineer</h3>
-                            <div class="company-info">
-                                <span class="company">Housing &amp; Development Bank (HDBank) — via Digital Transformation Solutions</span>
-                                <span class="period">October 2025 – Present</span>
-                            </div>
-                        </div>
-                        <div class="timeline-description">
-                            <p>Outsourced on-site to HDBank, managing production deployment and operations of critical banking applications and financial systems in a regulated environment.</p>
-                            <div class="achievements">
-                                <div class="achievement">
-                                    <i class="fas fa-server"></i>
-                                    <span>Manage production deployment and operations of the bank's core web application, property reservation portal, and internal systems</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Administer OneSpan RiskAnalytics for real-time fraud detection and transaction monitoring</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-tasks"></i>
-                                    <span>Support Kualitee test management platform for the core banking system upgrade testing cycles</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <span>Delivered a centralised Power BI Report Server solution that improved cross-departmental report sharing efficiency by over 30%</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Coordinate application releases and change management, ensuring zero-downtime deployments and rapid incident resolution</span>
-                                </div>
-                            </div>
-                            <div class="tech-stack" style="margin-top: 1rem;">
-                                <span class="tech-tag">Production Operations</span>
-                                <span class="tech-tag">Linux</span>
-                                <span class="tech-tag">Power BI</span>
-                                <span class="tech-tag">OneSpan</span>
-                                <span class="tech-tag">Kualitee</span>
-                                <span class="tech-tag">Change Management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- DEPI — UPDATED -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>DevOps Engineer Trainee <span style="color: var(--primary-color); font-size: 0.85rem; font-weight: 500;">— Top Achiever</span></h3>
-                            <div class="company-info">
-                                <span class="company">Digital Egyptian Pioneers Initiative (DEPI) — Ministry of Comms &amp; IT</span>
-                                <span class="period">June 2025 – December 2025</span>
-                            </div>
-                        </div>
-                        <div class="timeline-description">
-                            <p>Completed an intensive government-backed DevOps programme focused on modern application delivery and automation. Graduated as a Top Achiever.</p>
-                            <div class="achievements">
-                                <div class="achievement">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Built end-to-end Jenkins and GitHub Actions CI/CD pipelines for containerised AWS deployments</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-code"></i>
-                                    <span>Implemented Infrastructure as Code with Terraform and Ansible across the full SDLC</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-dharmachakra"></i>
-                                    <span>Practised Kubernetes cluster operations and GitOps workflows with ArgoCD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Appen — UPDATED -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>AI Data Quality Specialist</h3>
-                            <div class="company-info">
-                                <span class="company">Appen AI — contracted to ByteDance</span>
-                                <span class="period">January 2024 – October 2025</span>
-                            </div>
-                        </div>
-                        <div class="timeline-description">
-                            <p>Led a specialist team working directly with ByteDance's AI team to improve training data quality for ML models and AI agents using RLHF techniques.</p>
-                            <div class="achievements">
-                                <div class="achievement">
-                                    <i class="fas fa-rocket"></i>
-                                    <span>Contributed to the launch of an AI-powered search feature for the MENA region</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-robot"></i>
-                                    <span>Key contributor to the launch of a new conversational AI agent</span>
-                                </div>
-                                <div class="achievement">
-                                    <i class="fas fa-globe"></i>
-                                    <span>Collaborated with international cross-functional teams on data quality at scale</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITI / VMware -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Cloud Infrastructure Trainee</h3>
-                            <div class="company-info">
-                                <span class="company">VMware via Information Technology Institute (ITI)</span>
-                                <span class="period">August 2023 – November 2023</span>
-                            </div>
-                        </div>
-                        <div class="timeline-description">
-                            <p>Completed an intensive 3-month hands-on training programme in cloud computing and VMware virtualisation.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">VMware vSphere</span>
-                                <span class="tech-tag">ESXi</span>
-                                <span class="tech-tag">Virtualisation</span>
-                                <span class="tech-tag">System Admin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Construction -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Construction Engineer</h3>
-                            <div class="company-info">
-                                <span class="company">Jet for Construction and Contracting</span>
-                                <span class="period">July 2022 – August 2023</span>
-                            </div>
-                        </div>
-                        <div class="timeline-description">
-                            <p>Managed all phases of a 100M+ EGP construction project covering infrastructure, structural works, finishing, and landscaping in 15th of May City.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="exp-title">Experience</h2>
+          <p class="section-intro">
+            I moved from site engineering into cloud and infrastructure. The habits carried over: plan before you build,
+            check before you hand over, and keep the drawings current.
+          </p>
         </div>
+
+        <ol class="timeline">
+          <li class="job">
+            <div class="job-when"><time datetime="2025-10">Oct 2025</time> to present</div>
+            <div class="job-body">
+              <h3>Application Support Engineer</h3>
+              <p class="job-org">Housing and Development Bank (HDBank), Cairo</p>
+              <ul>
+                <li>Own production deployments for the bank's customer-facing web applications, including the main website and the property reservation portal, with pre-deployment checks and documented rollback plans in a regulated environment.</li>
+                <li>Administer and deploy internal platforms, including OneSpan Risk Analytics for fraud detection and transaction monitoring, and Kualitee for test management.</li>
+                <li>Troubleshoot production incidents through log analysis and system-level diagnostics, and lead root cause analysis across the application, web server and infrastructure layers.</li>
+                <li>Act as the main link between fraud, development and testing teams and external vendors, aligning releases with approved change windows.</li>
+                <li>Delivered a central Power BI Report Server that improved cross-department report sharing by 30%.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when"><time datetime="2025-06">Jun 2025</time> to <time datetime="2025-12">Dec 2025</time></div>
+            <div class="job-body">
+              <h3>DevOps Engineer Trainee, Top Achiever</h3>
+              <p class="job-org">Digital Egyptian Pioneers Initiative (DEPI), Ministry of Communications and IT</p>
+              <ul>
+                <li>Graduated as the top achiever of an intensive DevOps program covering CI/CD, cloud-native delivery and the full SDLC.</li>
+                <li>Built end-to-end pipelines with Jenkins and GitHub Actions targeting AWS and Kubernetes, with build, test, security scan and deploy stages.</li>
+                <li>Provisioned infrastructure with Terraform, automated configuration with Ansible and ran GitOps delivery with ArgoCD and Helm.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when"><time datetime="2024-01">Jan 2024</time> to <time datetime="2025-10">Oct 2025</time></div>
+            <div class="job-body">
+              <h3>AI Data Quality Specialist</h3>
+              <p class="job-org">Appen, remote, on ByteDance programs</p>
+              <ul>
+                <li>Led a specialist team working with ByteDance's AI team to improve training data for ML models and AI agents using RLHF.</li>
+                <li>Contributed to an AI search feature and an AI agent launched in ByteDance's main app for the MENA region.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when"><time datetime="2023-08">Aug 2023</time> to <time datetime="2023-11">Nov 2023</time></div>
+            <div class="job-body">
+              <h3>Cloud Infrastructure Trainee</h3>
+              <p class="job-org">VMware program at the Information Technology Institute (ITI)</p>
+              <ul>
+                <li>Configured ESXi hosts, managed VMs through vCenter and tuned resource allocation, with snapshot and backup strategies.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-when"><time datetime="2022-07">Jul 2022</time> to <time datetime="2023-08">Aug 2023</time></div>
+            <div class="job-body">
+              <h3>Construction Engineer</h3>
+              <p class="job-org">Jet for Construction and Contracting</p>
+              <ul>
+                <li>Managed every phase of an EGP 100M+ project, from infrastructure and structure to finishing and landscaping, coordinating site teams, subcontractors and stakeholders.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Expertise</h2>
-                <p class="section-subtitle">Comprehensive skill set for modern DevOps practices</p>
-            </div>
-            <div class="skills-content">
-                <div class="skills-categories">
-                    <div class="skill-category active" data-category="cloud">
-                        <i class="fas fa-cloud"></i>
-                        <span>Cloud Platforms</span>
-                    </div>
-                    <div class="skill-category" data-category="infrastructure">
-                        <i class="fas fa-server"></i>
-                        <span>Infrastructure Management</span>
-                    </div>
-                    <div class="skill-category" data-category="devops">
-                        <i class="fas fa-cogs"></i>
-                        <span>DevOps & Automation</span>
-                    </div>
-                    <div class="skill-category" data-category="containers">
-                        <i class="fab fa-docker"></i>
-                        <span>Containerization</span>
-                    </div>
-                    <div class="skill-category" data-category="monitoring">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Monitoring & Observability</span>
-                    </div>
-                    <div class="skill-category" data-category="programming">
-                        <i class="fas fa-code"></i>
-                        <span>Programming & Scripting</span>
-                    </div>
-                    <div class="skill-category" data-category="databases">
-                        <i class="fas fa-database"></i>
-                        <span>Databases & Systems</span>
-                    </div>
-                    <div class="skill-category" data-category="networking">
-                        <i class="fas fa-network-wired"></i>
-                        <span>Networking & Security</span>
-                    </div>
-                </div>
-
-                <div class="skills-display">
-                    <div class="skill-group active" data-group="cloud">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-aws"></i></div>
-                            <div class="skill-info">
-                                <h3>Amazon Web Services</h3>
-                                <p>EC2, EKS, ECS, S3, Lambda, RDS, VPC, IAM, CloudWatch, CloudFormation</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-server"></i></div>
-                            <div class="skill-info">
-                                <h3>VMware vSphere</h3>
-                                <p>ESXi, vCenter, Virtualisation, Data Center Management</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cubes"></i></div>
-                            <div class="skill-info">
-                                <h3>Infrastructure as Code</h3>
-                                <p>Terraform, AWS CloudFormation, Ansible Automation Platform</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="infrastructure">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-linux"></i></div>
-                            <div class="skill-info">
-                                <h3>Linux Administration</h3>
-                                <p>RHEL, Ubuntu Server, System Configuration, Troubleshooting, Shell Scripting</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-windows"></i></div>
-                            <div class="skill-info">
-                                <h3>Windows Server</h3>
-                                <p>Active Directory, Group Policy, DNS/DHCP Configuration, IIS</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-globe"></i></div>
-                            <div class="skill-info">
-                                <h3>Webservers</h3>
-                                <p>Apache, Nginx Proxy, Load Balancing</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <div class="skill-info">
-                                <h3>Database Management</h3>
-                                <p>MySQL, MongoDB, SQL Database Design, NoSQL Implementation, Performance Optimisation</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="devops">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-jenkins"></i></div>
-                            <div class="skill-info">
-                                <h3>CI/CD Pipelines</h3>
-                                <p>Jenkins, GitHub Actions, GitLab CI/CD, ArgoCD, GitOps</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                            <div class="skill-info">
-                                <h3>Version Control & Workflow</h3>
-                                <p>Git, GitOps, Agile / Scrum, SDLC, Conventional Commits, Git Flow</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                            <div class="skill-info">
-                                <h3>Automation & IaC</h3>
-                                <p>Terraform, Ansible, Infrastructure Automation, Ansible Vault, Process Optimisation</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="containers">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-docker"></i></div>
-                            <div class="skill-info">
-                                <h3>Docker</h3>
-                                <p>Containerisation, Docker Compose, Container Registry, Multi-stage Builds</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-dharmachakra"></i></div>
-                            <div class="skill-info">
-                                <h3>Kubernetes</h3>
-                                <p>Container Orchestration, Helm, Minikube, Health Probes, Resource Limits, Ingress</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cube"></i></div>
-                            <div class="skill-info">
-                                <h3>Microservices</h3>
-                                <p>Architecture Design, Container Management, Service Mesh concepts</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="monitoring">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                            <div class="skill-info">
-                                <h3>Monitoring & Metrics</h3>
-                                <p>Prometheus, Grafana, AWS CloudWatch, Zabbix, Performance Monitoring</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-bug"></i></div>
-                            <div class="skill-info">
-                                <h3>Log Analytics</h3>
-                                <p>ELK Stack (Elasticsearch, Logstash, Kibana), Log Management, Alerting</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div class="skill-info">
-                                <h3>Security Scanning</h3>
-                                <p>Trivy, SonarCloud, Terrascan, HashiCorp Vault, Bitnami SealedSecrets</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="programming">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <div class="skill-info">
-                                <h3>Python</h3>
-                                <p>Automation, Scripting, FastAPI, REST APIs, pytest, Data Processing</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
-                            <div class="skill-info">
-                                <h3>Shell Scripting</h3>
-                                <p>Bash, System Administration, Process Automation</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-file-code"></i></div>
-                            <div class="skill-info">
-                                <h3>Configuration & Data Formats</h3>
-                                <p>YAML, JSON, REST APIs, Infrastructure Configuration Management</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="databases">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <div class="skill-info">
-                                <h3>Database Management</h3>
-                                <p>MySQL, MongoDB, SQL Database Design, NoSQL Implementation, ERD Design</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
-                            <div class="skill-info">
-                                <h3>Reporting & BI</h3>
-                                <p>Power BI Report Server, Performance Optimisation, Query Tuning</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div class="skill-info">
-                                <h3>Data Security & Backup</h3>
-                                <p>Database Security, VEEAM Backup &amp; Replication, DR Planning, RPO/RTO</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-group" data-group="networking">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                            <div class="skill-info">
-                                <h3>Network Administration</h3>
-                                <p>TCP/IP, DNS, DHCP, Subnetting, CCNA-level Knowledge</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div class="skill-info">
-                                <h3>Security & Compliance</h3>
-                                <p>Security Groups, NACL, Firewall Configuration, Network Security</p>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-lock"></i></div>
-                            <div class="skill-info">
-                                <h3>Access Control</h3>
-                                <p>IAM, Authentication, Authorization, Identity Management, HashiCorp Vault</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="skills-title">What I work with</h2>
+          <p class="section-intro">Grouped by the job it does, so you can match it to the role you're hiring for.</p>
         </div>
+
+        <div class="skill-groups">
+          <section class="skill-group">
+            <h3>Cloud and architecture</h3>
+            <p>AWS: EC2, VPC, IAM, S3, RDS, Lambda, ECS, EKS, Fargate, ELB, CloudFormation, CloudWatch, SSM. Well-Architected design, multi-tier networking, security groups and NACLs. VMware vSphere, ESXi, vCenter.</p>
+          </section>
+          <section class="skill-group">
+            <h3>Delivery and automation</h3>
+            <p>Jenkins, GitHub Actions, GitLab CI/CD, ArgoCD and GitOps. Terraform modules and remote state, Ansible roles and Vault. Python and Bash. Trivy, SonarCloud and Terrascan as pipeline gates.</p>
+          </section>
+          <section class="skill-group">
+            <h3>Containers and platform</h3>
+            <p>Docker and Docker Compose, Kubernetes, Helm, Kustomize, Ingress, rolling updates, resource requests and limits. HashiCorp Vault and Sealed Secrets.</p>
+          </section>
+          <section class="skill-group">
+            <h3>Operations and reliability</h3>
+            <p>Production releases with rollback plans, change windows, incident and problem management (ITIL v4), root cause analysis, DR planning with RPO and RTO, Veeam backup and replication.</p>
+          </section>
+          <section class="skill-group">
+            <h3>Observability</h3>
+            <p>Prometheus, Grafana, Zabbix, CloudWatch, ELK. Custom application metrics, dashboards and log analysis.</p>
+          </section>
+          <section class="skill-group">
+            <h3>Systems and networking</h3>
+            <p>Linux (RHEL, Ubuntu), Windows Server, Active Directory and Group Policy, Nginx, Apache, IIS, MySQL, MongoDB. TCP/IP, DNS, DHCP and subnetting at CCNA level.</p>
+          </section>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Hands-on experience with real-world infrastructure and automation</p>
-            </div>
-            <div class="projects-grid">
-
-                <!-- HiveBox — NEW, featured first -->
-                <div class="project-card featured-project">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-dharmachakra"></i>
-                        </div>
-                        <h3>HiveBox — End-to-End DevOps Project</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/EhabAshrafMu/devops-hands-on-project-hivebox" class="project-link" aria-label="View project on GitHub" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/EhabAshrafMu/devops-hands-on-project-hivebox" class="project-link" aria-label="View code" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>A production-grade, end-to-end DevOps project built across 4 phases. A RESTful API that ingests live IoT sensor data, deployed with a full CI/CD pipeline, Kubernetes orchestration, and observability stack — following real engineering workflows throughout.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Trivy</span>
-                            <span class="tech-tag">SonarCloud</span>
-                            <span class="tech-tag">Terrascan</span>
-                        </div>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Kubernetes deployment with health probes, resource limits, Ingress, and rolling updates</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Multi-stage GitHub Actions CI/CD: Pylint 10/10, pytest, container builds, Docker Hub publishing</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Security scanning with Trivy, SonarCloud, and Terrascan integrated into the pipeline</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Prometheus metrics instrumentation and Git Flow branching throughout all phases</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CI/CD Pipeline -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Full-Stack CI/CD Pipeline on AWS</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/EhabAshrafMu/nodejs_pipeline_on_aws" class="project-link" aria-label="View project" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/EhabAshrafMu/nodejs_pipeline_on_aws" class="project-link" aria-label="View code" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Complete CI/CD pipeline using Jenkins for automated containerised Node.js application deployment on AWS, with modular Terraform infrastructure and Ansible Vault secrets management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Jenkins</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Ansible</span>
-                        </div>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Automated containerised Node.js deployment pipeline</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Modular Infrastructure as Code with Terraform</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Secure configuration management with Ansible Vault</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansible Multi-Host -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>Multi-Host Infrastructure Automation</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/EhabAshrafMu/MERN_stack_depolyment_using_Ansible_Roles" class="project-link" aria-label="View project" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="https://github.com/EhabAshrafMu/MERN_stack_depolyment_using_Ansible_Roles" class="project-link" aria-label="View code" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <p>Automated deployment of MERN and LAMP stack applications across multiple host environments using Ansible roles, group variables, and vault encryption.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Ansible</span>
-                            <span class="tech-tag">MERN Stack</span>
-                            <span class="tech-tag">LAMP Stack</span>
-                            <span class="tech-tag">Ansible Vault</span>
-                        </div>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Multi-host environment automation with Ansible roles</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Modular group variables for environment management</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check"></i>
-                                <span>Vault encryption for secure secrets management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section section-alt" id="certifications" aria-labelledby="cert-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="cert-title">Certifications</h2>
+          <p class="section-intro">
+            Each AWS certification can be checked at aws.amazon.com/verification with the validation number below.
+            Credentials are issued under the name Ehab Musa.
+          </p>
         </div>
+
+        <ul class="cert-list">
+          <li class="cert cert-feature">
+            <div class="cert-main">
+              <h3>AWS Certified Solutions Architect – Professional</h3>
+              <p class="cert-dates">Issued 30 Sep 2026, valid to 30 Sep 2029</p>
+            </div>
+            <div class="cert-verify">
+              <span class="cert-id-label">Validation number</span>
+              <span class="cert-id">20ddaec598c340a190dd01a7d7261cc5</span>
+              <div class="cert-actions">
+                <button class="copy-btn" type="button" data-copy="20ddaec598c340a190dd01a7d7261cc5"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy number</span></button>
+                <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Verify on AWS</a>
+                <a href="assets/certs/aws-solutions-architect-professional.pdf" target="_blank" rel="noopener">View certificate</a>
+              </div>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-main">
+              <h3>AWS Certified Solutions Architect – Associate</h3>
+              <p class="cert-dates">Issued 27 Mar 2025, valid to 30 Sep 2029</p>
+            </div>
+            <div class="cert-verify">
+              <span class="cert-id-label">Validation number</span>
+              <span class="cert-id">ca0f84f732cb4ad38298023d09ec3c8a</span>
+              <div class="cert-actions">
+                <button class="copy-btn" type="button" data-copy="ca0f84f732cb4ad38298023d09ec3c8a"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy number</span></button>
+                <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Verify on AWS</a>
+                <a href="assets/certs/aws-solutions-architect-associate.pdf" target="_blank" rel="noopener">View certificate</a>
+              </div>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-main">
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p class="cert-dates">Issued 17 Oct 2024, valid to 30 Sep 2029</p>
+            </div>
+            <div class="cert-verify">
+              <span class="cert-id-label">Validation number</span>
+              <span class="cert-id">d4cf3259e35d4d9181bae8e9b4d7d5d9</span>
+              <div class="cert-actions">
+                <button class="copy-btn" type="button" data-copy="d4cf3259e35d4d9181bae8e9b4d7d5d9"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy number</span></button>
+                <a href="https://aws.amazon.com/verification" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>Verify on AWS</a>
+                <a href="assets/certs/aws-cloud-practitioner.pdf" target="_blank" rel="noopener">View certificate</a>
+              </div>
+            </div>
+          </li>
+          <li class="cert">
+            <div class="cert-main">
+              <h3>VMware Certified Technical Associate – Data Center Virtualization</h3>
+              <p class="cert-dates">VCTA-DCV</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="also">
+          <h3>Training and education</h3>
+          <ul>
+            <li>DEPI DevOps Engineer program, Top Achiever (2025)</li>
+            <li>AWS Academy Cloud Foundations and Architecting, 140+ hours</li>
+            <li>Cisco Networking Essentials</li>
+            <li>Harvard CS50: Introduction to Computer Science</li>
+            <li>BSc Civil Engineering, Suez Canal University, grade Very Good (2020)</li>
+          </ul>
+          <h3>Languages</h3>
+          <ul>
+            <li>Arabic, native</li>
+            <li>English, fluent (C2)</li>
+            <li>German, intermediate (B1)</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Certifications & Achievements</h2>
-                <p class="section-subtitle">Validated expertise in cloud and DevOps technologies</p>
-            </div>
-            <div class="certifications-grid">
-
-                <div class="certification-card featured">
-                    <div class="cert-badge">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3>AWS Certified Solutions Architect</h3>
-                    <p class="cert-level">Associate Level (SAA-C03)</p>
-                    <div class="cert-skills">
-                        <span>EC2</span>
-                        <span>S3</span>
-                        <span>Lambda</span>
-                        <span>VPC</span>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-badge">
-                        <i class="fab fa-aws"></i>
-                    </div>
-                    <h3>AWS Certified Cloud Practitioner</h3>
-                    <p class="cert-level">Foundation Level (CLF-C01)</p>
-                    <div class="cert-skills">
-                        <span>Cloud Concepts</span>
-                        <span>Security</span>
-                        <span>Technology</span>
-                        <span>Billing</span>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-badge">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>VMware Certified Technical Associate</h3>
-                    <p class="cert-level">Data Center Virtualization (VCTA-DCV)</p>
-                    <div class="cert-skills">
-                        <span>vSphere</span>
-                        <span>ESXi</span>
-                        <span>Virtualisation</span>
-                        <span>Data Center</span>
-                    </div>
-                </div>
-
-                <!-- DEPI — NEW -->
-                <div class="certification-card featured">
-                    <div class="cert-badge">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>DevOps Engineer Programme — Top Achiever</h3>
-                    <p class="cert-level">Digital Egyptian Pioneers Initiative (DEPI) / Ministry of Comms & IT</p>
-                    <div class="cert-skills">
-                        <span>CI/CD</span>
-                        <span>Kubernetes</span>
-                        <span>Terraform</span>
-                        <span>Jenkins</span>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-badge">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>AWS Academy Bootcamp</h3>
-                    <p class="cert-level">Cloud Foundations and Architecting — 140+ hours</p>
-                    <div class="cert-skills">
-                        <span>Cloud Foundations</span>
-                        <span>Architecting</span>
-                        <span>Best Practices</span>
-                        <span>Hands-on</span>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-badge">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Cisco Networking Essentials</h3>
-                    <p class="cert-level">Cisco</p>
-                    <div class="cert-skills">
-                        <span>Networking</span>
-                        <span>TCP/IP</span>
-                        <span>DNS</span>
-                        <span>DHCP</span>
-                    </div>
-                </div>
-
-                <div class="certification-card">
-                    <div class="cert-badge">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>CS50: Introduction to Computer Science</h3>
-                    <p class="cert-level">Harvard University</p>
-                    <div class="cert-skills">
-                        <span>Computer Science</span>
-                        <span>Programming</span>
-                        <span>Algorithms</span>
-                        <span>Problem Solving</span>
-                    </div>
-                </div>
-
-            </div>
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <h2 id="contact-title">Let's talk about your infrastructure</h2>
+        <p>
+          I'm looking for DevOps, cloud, platform and infrastructure roles in Egypt, Saudi Arabia, the Gulf, Europe or remote,
+          and I can relocate. Email is the fastest way to reach me.
+        </p>
+        <div class="contact-actions">
+          <a class="btn btn-light" href="mailto:ehabxm25@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>ehabxm25@gmail.com</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>Message me on LinkedIn</a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Open to remote and on-site opportunities globally</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:ehabxm25@gmail.com" aria-label="Send email to ehabxm25@gmail.com">ehabxm25@gmail.com</a></p>
-                        </div>
-                    </div>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Ehab Ashraf Muhammed, Cairo, Egypt</p>
+      <p>
+        <a href="https://github.com/EhabAshrafMu" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="Ehab_Ashraf_DevOps_Engineer.pdf" download>CV (PDF)</a>
+      </p>
+    </div>
+  </footer>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+201022871019" aria-label="Call +201022871019">+20 102 287 1019</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">linkedin.com/in/ehab-ashraf-mu</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p><a href="https://www.github.com/EhabAshrafMu" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">github.com/EhabAshrafMu</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Location</h3>
-                            <p>Cairo, Egypt — Open to Remote & Relocation</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-cta">
-                    <div class="cta-content">
-                        <h3>Let's Build Something Together</h3>
-                        <p>Whether you're looking for help with cloud infrastructure, CI/CD automation, or production DevOps — I'd love to hear about what you're working on.</p>
-                        <div class="hero-buttons">
-                            <a href="mailto:ehabxm25@gmail.com" class="btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                Send Message
-                            </a>
-                            <a href="Ehab_Ashraf_DevOps_Engineer.pdf" download class="btn-secondary">
-                                <i class="fas fa-download"></i>
-                                Download Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <div class="footer-logo">
-                        <span class="logo-bracket">&lt;</span>
-                        <span class="logo-name">Ehab</span>
-                        <span class="logo-bracket">/&gt;</span>
-                    </div>
-                    <p>DevOps Engineer building reliable cloud infrastructure and automated delivery pipelines.</p>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/in/ehab-ashraf-mu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit LinkedIn profile">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.github.com/EhabAshrafMu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Visit GitHub profile">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                    <p class="footer-copyright">&copy; 2026 Ehab Ashraf Muhammed. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
